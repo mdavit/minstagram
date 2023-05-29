@@ -119,7 +119,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         if x == 0 {
             model = feedRenderModels[0]
             
-        } else {
+        }
+        else {
             let position = x % 4 == 0 ? x/4 : ((x - (x % 4)) / 4)
             model = feedRenderModels[position]
         }
@@ -217,19 +218,22 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let subSection = indexPath.section % 4
-        if indexPath.row == 0 {
+        if subSection == 0 {
             // Header
             return 70
             
-        } else if subSection == 1 {
+        }
+        else if subSection == 1 {
             // Post
             return tableView.width
             
-        } else if subSection == 2 {
+        }
+        else if subSection == 2 {
             // Actions (like/comment)
             return 60
             
-        } else if subSection == 3 {
+        }
+        else if subSection == 3 {
             // Comment row
             return 50
             

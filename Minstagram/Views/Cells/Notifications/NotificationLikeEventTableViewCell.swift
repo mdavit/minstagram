@@ -86,7 +86,6 @@ class NotificationLikeEventTableViewCell: UITableViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        print("prepareForReuse() called")
         postButton.setBackgroundImage(nil, for: .normal)
         label.text = nil
         profileImageView.image = nil

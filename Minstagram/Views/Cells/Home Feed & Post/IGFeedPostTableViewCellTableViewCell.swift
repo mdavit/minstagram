@@ -18,7 +18,7 @@ final class IGFeedPostTableViewCell: UITableViewCell {
        let imageView = UIImageView()
         imageView.backgroundColor = nil
         imageView.clipsToBounds = true
-        imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .scaleAspectFill
 
         return imageView
     }()
@@ -51,6 +51,7 @@ final class IGFeedPostTableViewCell: UITableViewCell {
             playerLayer.player = player
             playerLayer.player?.volume = 0
             playerLayer.player?.play()
+            
         }
     }
     
